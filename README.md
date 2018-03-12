@@ -12,8 +12,8 @@ Technology used:
    * Amazon Quicksight
    
 Solution architecture
-![Image of Architecture](https://github.com/AmineIzanami/Amazing_football_service_AWS/images/Proposed_solution_architecture.png)
+![Image of Architecture](https://github.com/AmineIzanami/Amazing_football_service_AWS/blob/master/images/Proposed_solution_architecture.png)
 Amazon Quicksight Map
-![Image of Map](https://github.com/AmineIzanami/Amazing_football_service_AWS/images/Top11_Player_Map.png)
+![Image of Map](https://github.com/AmineIzanami/Amazing_football_service_AWS/blob/master/images/Top11_Player_Map.png)
 Amazon Quicksight Dashboard
-![Image of Dashboard](https://github.com/AmineIzanami/Amazing_football_service_AWS/images/Top11_Player_Stats.png)
+![Image of Dashboard](https://github.com/AmineIzanami/Amazing_football_service_AWS/blob/master/images/Top11_Player_Stats.png)
