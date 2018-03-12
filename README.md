@@ -12,4 +12,4 @@ Technology used:
     * Amazon Quicksight
    
 Solution architecture
-![Image of Yaktocat](https://github.com/AmineIzanami/Amazing_football_service_AWS/images/Proposed_solution_architecture.png)
+![Image of Architecture](https://github.com/AmineIzanami/Amazing_football_service_AWS/images/Proposed_solution_architecture.png)
