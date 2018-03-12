@@ -1,0 +1,49 @@
+{
+  "variables": {
+    "aws_access_key": "my_access_key",
+    "aws_secret_key": "my_secret_access_key",
+	"aws_region": "eu-west-1",
+	"aws_ami_image": "ami-d834aba1"
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "{{user `aws_region`}}",
+    "source_ami": "{{user `aws_ami_image`}}",
+    "instance_type": "t2.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "packer-prototype {{timestamp}}",
+	"tags": {
+        "Name": "Prototype-inventory-data-{{user `image_version`}}"
+      },
+	"vpc_id": "vpc-8d00b2eb",
+	"associate_public_ip_address":"true"
+  }],
+  "provisioners": [
+	{
+      "type": "shell",
+	  "inline": ["mkdir prototype-scripts .aws"]
+    },
+    {
+      "type": "file",
+      "source": "ingestion-script.sh",
+      "destination": "~/prototype-scripts/"
+    },
+	{
+      "type": "file",
+      "source": "credentials.txt",
+      "destination": "~/.aws/"
+    },
+	{
+      "type": "file",
+      "source": "cron-script.sh",
+      "destination": "~/prototype-scripts/"
+    },
+	{
+		"type":"shell",
+		"script":"config-script.sh"
+	
+	}
+  ]
+}
